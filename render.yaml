@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: mc-server
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: scale
+    disk:
+      name: mc-world
+      mountPath: /app/world
+      sizeGB: 10
+    envVars:
+      - key: VIEW_DIST
+        value: 16
+      - key: SIM_DIST
+        value: 10
