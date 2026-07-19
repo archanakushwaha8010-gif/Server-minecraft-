@@ -6,10 +6,18 @@ services:
     plan: scale
     disk:
       name: mc-world
-      mountPath: /app/world
+      mountPath: /data          # IMPORTANT: image uses /data for world
       sizeGB: 10
     envVars:
-      - key: VIEW_DIST
-        value: 16
-      - key: SIM_DIST
-        value: 10
+      - key: EULA
+        value: "TRUE"
+      - key: VERSION
+        value: "1.21.3"         # ya "LATEST"
+      - key: VIEW_DISTANCE
+        value: "16"
+      - key: SIMULATION_DISTANCE
+        value: "10"
+      - key: MEMORY
+        value: "4G"
+      - key: ENABLE_WHITELIST
+        value: "false"          # tu chahe toh "true" kar de
