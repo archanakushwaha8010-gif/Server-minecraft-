@@ -12,12 +12,8 @@ services:
       - key: EULA
         value: "TRUE"
       - key: VERSION
-        value: "1.21.3"
+        value: "LATEST"          # ya "1.20.80"
       - key: VIEW_DISTANCE
         value: "16"
-      - key: SERVER_NAME
-        value: "Mera Bedrock Server"
       - key: MEMORY
         value: "4G"
-      - key: ENABLE_WHITELIST
-        value: "true"   # baad mein true kar dena
