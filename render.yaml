@@ -6,13 +6,13 @@ services:
     plan: scale
     disk:
       name: mc-world
-      mountPath: /data          # IMPORTANT: image uses /data for world
+      mountPath: /data          # IMPORTANT: itzg image uses /data for world
       sizeGB: 10
     envVars:
       - key: EULA
         value: "TRUE"
       - key: VERSION
-        value: "1.21.3"         # ya "LATEST"
+        value: "1.21.3"          # Ya "LATEST" for latest stable
       - key: VIEW_DISTANCE
         value: "16"
       - key: SIMULATION_DISTANCE
@@ -20,4 +20,6 @@ services:
       - key: MEMORY
         value: "4G"
       - key: ENABLE_WHITELIST
-        value: "false"          # tu chahe toh "true" kar de
+        value: "false"
+      - key: ONLINE_MODE
+        value: "true"            # Agar cracked server chahta hai toh "false" kar
