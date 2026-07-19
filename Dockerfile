@@ -1,3 +1,5 @@
-FROM itzg/minecraft-server:latest
+FROM itzg/minecraft-bedrock-server:latest
 ENV EULA=TRUE
-EXPOSE 25565 19132
+ENV VERSION=1.21.3
+EXPOSE 19132/udp
+CMD ["bedrock_server"]
