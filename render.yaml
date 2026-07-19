@@ -12,7 +12,7 @@ services:
       - key: EULA
         value: "TRUE"
       - key: VERSION
-        value: "LATEST"          # ya "1.20.80"
+        value: "LATEST"          # <- YAHI CHANGE KARO – "1.21.3" nahi
       - key: VIEW_DISTANCE
         value: "16"
       - key: MEMORY
