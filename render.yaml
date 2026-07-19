@@ -1,11 +1,11 @@
 services:
   - type: worker
-    name: mc-server
+    name: mc-bedrock
     env: docker
     dockerfilePath: ./Dockerfile
     plan: scale
     disk:
-      name: mc-world
+      name: bedrock-world
       mountPath: /data
       sizeGB: 10
     envVars:
@@ -15,25 +15,9 @@ services:
         value: "1.21.3"
       - key: VIEW_DISTANCE
         value: "16"
-      - key: SIMULATION_DISTANCE
-        value: "10"
+      - key: SERVER_NAME
+        value: "Mera Bedrock Server"
       - key: MEMORY
         value: "4G"
       - key: ENABLE_WHITELIST
-        value: "false"
-      - key: ONLINE_MODE
-        value: "true"
-      # Geyser + Floodgate for Bedrock support
-      - key: ENABLE_GEYSER
-        value: "true"
-      - key: GEYSER_PORT
-        value: "19132"
-      - key: ENABLE_FLOODGATE
-        value: "true"
-      - key: FLOODGATE_PORT
-        value: "19132"  # same port, Floodgate handles auth
-      # Optional: Geyser config tweaks
-      - key: GEYSER_ADDRESS
-        value: "0.0.0.0"
-      - key: GEYSER_ENABLE_PROXY_PROTOCOL
-        value: "false"
+        value: "true"   # baad mein true kar dena
