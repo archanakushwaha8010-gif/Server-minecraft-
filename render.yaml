@@ -6,13 +6,13 @@ services:
     plan: scale
     disk:
       name: mc-world
-      mountPath: /data          # IMPORTANT: itzg image uses /data for world
+      mountPath: /data
       sizeGB: 10
     envVars:
       - key: EULA
         value: "TRUE"
       - key: VERSION
-        value: "1.21.3"          # Ya "LATEST" for latest stable
+        value: "1.21.3"
       - key: VIEW_DISTANCE
         value: "16"
       - key: SIMULATION_DISTANCE
@@ -22,4 +22,18 @@ services:
       - key: ENABLE_WHITELIST
         value: "false"
       - key: ONLINE_MODE
-        value: "true"            # Agar cracked server chahta hai toh "false" kar
+        value: "true"
+      # Geyser + Floodgate for Bedrock support
+      - key: ENABLE_GEYSER
+        value: "true"
+      - key: GEYSER_PORT
+        value: "19132"
+      - key: ENABLE_FLOODGATE
+        value: "true"
+      - key: FLOODGATE_PORT
+        value: "19132"  # same port, Floodgate handles auth
+      # Optional: Geyser config tweaks
+      - key: GEYSER_ADDRESS
+        value: "0.0.0.0"
+      - key: GEYSER_ENABLE_PROXY_PROTOCOL
+        value: "false"
